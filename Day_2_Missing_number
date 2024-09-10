@@ -1,0 +1,20 @@
+class Solution {
+    int missingNumber(int n, int arr[]) {
+        int sum = 0;
+        for(int i : arr) {
+            sum += i;
+        }
+        int total = (n * (n + 1)) / 2;
+        return total - sum;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        int n = 5;
+        int[] arr = {1, 2, 3, 5};
+        
+        int missing = solution.missingNumber(n, arr);
+        System.out.println("The missing number is: " + missing);
+    }
+}
